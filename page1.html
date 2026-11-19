@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Setup - Blackgrid Autos</title>
+    <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+    <a href="navigation.html" class="back-home">← Back to Home</a>
+
+    <div class="formbox">
+        <h2>BLACKGRID <span>AUTOS</span></h2>
+        <h3>Account Setup</h3>
+        <p class="subtitle">Step 1 of 3 - Enter Your Name</p>
+        
+        <div class="progress">
+            <div class="progress-fill"></div>
+        </div>
+
+        <form action="page2.html">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="Enter First Name" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Enter Last Name" required>
+
+            <button type="submit">Next →</button>
+        </form>
+
+        <p class="bottom-text">Already have an account? <a href="#">Sign In</a></p>
+    </div>
+</body>
+</html>
+
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body {
+    background: black;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.back-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #FFC107;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.formbox {
+    background: #141414;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px 30px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    border-top: 3px solid #FFC107;
+    text-align: center;
+}
+.formbox h2 { font-size: 24px; letter-spacing: 1px; }
+.formbox h2 span { color: #FFC107; }
+.formbox h3 { color: #ddd; margin: 8px 0 4px; font-size: 18px; }
+.subtitle { color: #888; font-size: 13px; margin-bottom: 15px; }
+
+.progress {
+    background: #222;
+    height: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+.progress-fill {
+    background: #FFC107;
+    width: 50%;
+    height: 100%;
+}
+
+form { text-align: left; }
+label {
+    display: block;
+    font-size: 13px;
+    color: #aaa;
+    margin: 15px 0 6px;
+}
+input {
+    width: 100%;
+    padding: 13px;
+    background: #0a0a0a;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+input:focus { border-color: #FFC107; }
+input::placeholder { color: #666; }
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px;
+    background: #FFC107;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+button:hover { background: white; }
+
+.bottom-text {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #888;
+    text-align: center;
+}
+.bottom-text a { color: #FFC107; text-decoration: none; }
+
+/* PHONE */
+@media (max-width: 480px) {
+    .formbox { padding: 25px 20px; }
+    .back-home { position: static; display: block; margin-bottom: 15px; text-align: left; }
+    body { flex-direction: column; align-items: stretch; }
+}
+</style>
